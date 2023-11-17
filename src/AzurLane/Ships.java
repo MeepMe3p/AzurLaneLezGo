@@ -1,5 +1,8 @@
 package AzurLane;
 
+import java.util.ArrayList;
+import java.util.Comparator;
+
 public abstract class Ships {
     String name;
 
@@ -10,7 +13,7 @@ public abstract class Ships {
     int exp;
     int level;
 
-    public abstract void attack(Ships ships);
+    public abstract void attack(ArrayList<Ships> s);
     public Ships(String name, int hp, int dmg, int atk_spd, double location,int exp,int level) {
         this.name = name;
         this.hp = hp;
@@ -31,5 +34,11 @@ public abstract class Ships {
 
     public void setLocation(double location) {
         this.location = location;
+    }
+    public static class CompareDistance implements Comparator<Ships>{
+        @Override
+        public int compare(Ships o1, Ships o2) {
+            return Double.compare(o1.location,o2.location);
+        }
     }
 }

@@ -13,3 +13,6 @@ interface Battleship{
 interface Carrier{
     public void airStrike();
 }
+interface Boss{
+    public void skill();
+}

@@ -7,7 +7,6 @@ public class Battle {
 
     private ArrayList<EnemyShip> boss;
     private ArrayList<EnemyShip> normal;
-    private ArrayList<Ships> playerFleet;
 
     public Battle() {
         this.boss = new ArrayList<>();

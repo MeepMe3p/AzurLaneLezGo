@@ -4,11 +4,16 @@ import javax.swing.*;
 import java.util.ArrayList;
 
 public class RealBattle {
-    private ArrayList<EnemyShip> bossEnemy;
-    private ArrayList <Ships> playerFleet;
-    private ArrayList <EnemyShip> normalEnemy;
+    private  ArrayList<EnemyShip> bossEnemy;
+    private  ArrayList <Ships> playerFleet;
+    private  ArrayList <EnemyShip> normalEnemy;
 
-    private JTextArea battle;
+    private ArrayList<Ships> everyone;
+    private ArrayList<Ships> enemies;
+
+
+
+    private final JTextArea battle;
 
     public RealBattle(ArrayList<EnemyShip> bossEnemy, ArrayList<Ships> playerFleet, ArrayList<EnemyShip> normalEnemy, JTextArea battle) {
         this.bossEnemy = bossEnemy;
@@ -18,43 +23,52 @@ public class RealBattle {
     }
 
     public void startBattle(){
-        ArrayList<Ships> dead = new ArrayList<>();
+        enemies = new ArrayList<>();
+        everyone = new ArrayList<>();
+        ArrayList<Ships> sunkenShips = new ArrayList<>();
+        if(playerFleet == null){
+            throw new IllegalArgumentException("You need to set your attack fleet");
+        }
+        enemies.addAll(bossEnemy);
+        enemies.addAll(normalEnemy);
+
+
+        everyone.addAll(bossEnemy);
+        everyone.addAll(playerFleet);
+        everyone.addAll(normalEnemy);
+        int i = 1;
         while(!playerFleet.isEmpty() && !bossEnemy.isEmpty()){
-//            playerFleet.clear();
-            for(Ships ps: playerFleet){
-                for(EnemyShip e: bossEnemy){
-
-                    ps.attack(e);
-                    battle.append(ps.name+" attacked "+e.name+" dealing "+ ps.dmg+ " "+ e.name+"'s HP is now "+ e.hp+"\n");
-                    e.attack(ps);
-                    battle.append(e.name+" attacked "+ps.name+" dealing "+ e.dmg+ " "+ ps.name+"'s HP is now "+ ps.hp+"\n");
-
-
-                    if(e.hp <=0){
-                        battle.append(e.name+" ran out of hp she ded pien");
-                        dead.add(e);
+            for(Ships e: everyone){
+                if(e instanceof VanguardShips){
+                    e.attack(enemies);
+                }
+                if(e instanceof MainShips){
+                    e.attack(enemies);
+                }
+                if(e instanceof EnemyShip){
+                    if(e instanceof Boss){
+                        ((Boss) e).skill();
                     }
-                    if(ps.hp <= 0){
-                        battle.append(ps.name+" ran out of hp she ded pien");
-                        dead.add(ps);
+                    e.attack(playerFleet);
+                }
+            }
+            ArrayList<Ships> dead = new ArrayList<>();
+            for(Ships s: everyone){
+                if(s.hp <= 0){
+                    dead.add(s);
+                    if(s instanceof Boss){
+                        bossEnemy.remove(s);
+                    }
+                    if(s instanceof VanguardShips || s instanceof MainShips){
+                        playerFleet.remove(s);
+                    }
+                    else{
+                        normalEnemy.remove(s);
                     }
                 }
 
             }
-            playerFleet.removeAll(dead);
-            bossEnemy.removeAll(dead);
-            dead.clear();
-            if(playerFleet.isEmpty()){
-                battle.setText("Your fleet has been finished.You lose");
-                break;
-            }
-            if(bossEnemy.isEmpty()){
-                battle.setText("The enemy fleet has been destroyed, You win");
-                break;
-            }
-
-
         }
-//            battle.setText("this worked");
+        battle.setText("this worked mahuman sha yay");
     }
 }

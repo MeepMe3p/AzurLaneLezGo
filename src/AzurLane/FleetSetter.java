@@ -48,16 +48,16 @@ public class FleetSetter {
 
         if(main2.getSelectedIndex() == main1.getSelectedIndex()){
 //            System.out.println("this append cuz equal ang 1 ug 2\n");
-            System.out.println("Main1 index: "+ main1.getSelectedIndex());
-            System.out.println("Main2 index: "+ main2.getSelectedIndex());
+//            System.out.println("Main1 index: "+ main1.getSelectedIndex());
+//            System.out.println("Main2 index: "+ main2.getSelectedIndex());
 
             main1.setSelectedIndex(main2.getSelectedIndex());
             main2.setSelectedIndex(main1.getSelectedIndex());
         }
         if(main3.getSelectedIndex() == main1.getSelectedIndex()){
 //            System.out.println("this append cuz equal ang 1 ug 3\n");
-            System.out.println("Main1 index: "+ main1.getSelectedIndex());
-            System.out.println("Main3 index: "+ main3.getSelectedIndex());
+//            System.out.println("Main1 index: "+ main1.getSelectedIndex());
+//            System.out.println("Main3 index: "+ main3.getSelectedIndex());
             main1.setSelectedIndex(main3.getSelectedIndex());
             main3.setSelectedIndex(main1.getSelectedIndex());
         }
@@ -69,15 +69,15 @@ public class FleetSetter {
 
         if (main2.getSelectedIndex() == main1.getSelectedIndex()) {
 //            System.out.println("this append cuz equal ang 1 ug 2\n");
-            System.out.println("Main1 index: "+ main1.getSelectedIndex());
-            System.out.println("Main2 index: "+ main2.getSelectedIndex());
+//            System.out.println("Main1 index: "+ main1.getSelectedIndex());
+//            System.out.println("Main2 index: "+ main2.getSelectedIndex());
             main2.setSelectedIndex(main1.getSelectedIndex());
             main1.setSelectedIndex(main2.getSelectedIndex());
         }
         if (main2.getSelectedIndex() == main3.getSelectedIndex()) {
 //            System.out.println("this append cuz equal ang 2 ug 3\n");
-            System.out.println("Main2 index: "+ main2.getSelectedIndex());
-            System.out.println("Main3 index: "+ main3.getSelectedIndex());
+//            System.out.println("Main2 index: "+ main2.getSelectedIndex());
+//            System.out.println("Main3 index: "+ main3.getSelectedIndex());
             main2.setSelectedIndex(main3.getSelectedIndex());
             main3.setSelectedIndex(main2.getSelectedIndex());
         }
@@ -85,15 +85,15 @@ public class FleetSetter {
     public void setMainFleet3() {
         if (main3.getSelectedIndex() == main1.getSelectedIndex()) {
 //            System.out.println("this append cuz equal ang 1 ug 3\n");
-            System.out.println("Main1 index: "+ main1.getSelectedIndex());
-            System.out.println("Main3 index: "+ main3.getSelectedIndex());
+//            System.out.println("Main1 index: "+ main1.getSelectedIndex());
+//            System.out.println("Main3 index: "+ main3.getSelectedIndex());
             main3.setSelectedIndex(main1.getSelectedIndex());
             main1.setSelectedIndex(main3.getSelectedIndex());
         }
         if (main3.getSelectedIndex() == main2.getSelectedIndex()) {
 //            System.out.println("this append cuz equal ang 3 ug 2\n");
-            System.out.println("Main2 index: "+ main2.getSelectedIndex());
-            System.out.println("Main3 index: "+ main3.getSelectedIndex());
+//            System.out.println("Main2 index: "+ main2.getSelectedIndex());
+//            System.out.println("Main3 index: "+ main3.getSelectedIndex());
             main3.setSelectedIndex(main2.getSelectedIndex());
             main2.setSelectedIndex(main3.getSelectedIndex());
         }
@@ -104,16 +104,16 @@ public class FleetSetter {
 
         if(van2.getSelectedIndex() == van1.getSelectedIndex()){
 //            System.out.println("this append cuz equal ang 1 ug 2\n");
-            System.out.println("van1 index: "+ van1.getSelectedIndex());
-            System.out.println("van2 index: "+ van2.getSelectedIndex());
+//            System.out.println("van1 index: "+ van1.getSelectedIndex());
+//            System.out.println("van2 index: "+ van2.getSelectedIndex());
 
             van1.setSelectedIndex(van2.getSelectedIndex());
             van2.setSelectedIndex(van1.getSelectedIndex());
         }
         if(van3.getSelectedIndex() == van1.getSelectedIndex()){
 //            System.out.println("this append cuz equal ang 1 ug 3\n");
-            System.out.println("van1 index: "+ van1.getSelectedIndex());
-            System.out.println("van3 index: "+ van3.getSelectedIndex());
+//            System.out.println("van1 index: "+ van1.getSelectedIndex());
+//            System.out.println("van3 index: "+ van3.getSelectedIndex());
             van1.setSelectedIndex(van3.getSelectedIndex());
             van3.setSelectedIndex(van1.getSelectedIndex());
         }
@@ -125,15 +125,15 @@ public class FleetSetter {
 
         if (van2.getSelectedIndex() == van1.getSelectedIndex()) {
 //            System.out.println("this append cuz equal ang 1 ug 2\n");
-            System.out.println("Van1 index: "+ van1.getSelectedIndex());
-            System.out.println("van2 index: "+ van2.getSelectedIndex());
+//            System.out.println("Van1 index: "+ van1.getSelectedIndex());
+//            System.out.println("van2 index: "+ van2.getSelectedIndex());
             van2.setSelectedIndex(van1.getSelectedIndex());
             van1.setSelectedIndex(van2.getSelectedIndex());
         }
         if (van2.getSelectedIndex() == van3.getSelectedIndex()) {
 //            System.out.println("this append cuz equal ang 2 ug 3\n");
-            System.out.println("van2 index: "+ van2.getSelectedIndex());
-            System.out.println("van3 index: "+ van3.getSelectedIndex());
+//            System.out.println("van2 index: "+ van2.getSelectedIndex());
+//            System.out.println("van3 index: "+ van3.getSelectedIndex());
             van2.setSelectedIndex(van3.getSelectedIndex());
             van3.setSelectedIndex(van2.getSelectedIndex());
         }
@@ -141,15 +141,15 @@ public class FleetSetter {
     public void setVanFleet3() {
         if (van3.getSelectedIndex() == van1.getSelectedIndex()) {
 //            System.out.println("this append cuz equal ang 1 ug 3\n");
-            System.out.println("Van1 index: "+ van1.getSelectedIndex());
-            System.out.println("Van3 index: "+ van3.getSelectedIndex());
+//            System.out.println("Van1 index: "+ van1.getSelectedIndex());
+//            System.out.println("Van3 index: "+ van3.getSelectedIndex());
             van3.setSelectedIndex(van1.getSelectedIndex());
             van1.setSelectedIndex(van3.getSelectedIndex());
         }
         if (van3.getSelectedIndex() == van2.getSelectedIndex()) {
 //            System.out.println("this append cuz equal ang 3 ug 2\n");
-            System.out.println("Van2 index: "+ van2.getSelectedIndex());
-            System.out.println("Van3 index: "+ van3.getSelectedIndex());
+//            System.out.println("Van2 index: "+ van2.getSelectedIndex());
+//            System.out.println("Van3 index: "+ van3.getSelectedIndex());
             van3.setSelectedIndex(van2.getSelectedIndex());
             van2.setSelectedIndex(van3.getSelectedIndex());
         }

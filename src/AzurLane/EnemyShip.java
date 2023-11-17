@@ -1,5 +1,6 @@
 package AzurLane;
 
+import java.util.ArrayList;
 import java.util.Random;
 public abstract class EnemyShip extends Ships{
 
@@ -10,7 +11,7 @@ public abstract class EnemyShip extends Ships{
     }
 
 
-    public static class BossDestroyer extends EnemyShip implements Destroyer{
+    public static class BossDestroyer extends EnemyShip implements Destroyer,Boss{
         public BossDestroyer() {
             super("BossDes", 80, 3, 2,10);
         }
@@ -21,12 +22,16 @@ public abstract class EnemyShip extends Ships{
         }
 
         @Override
-        public void attack(Ships s) {
-            s.hp -= dmg;
+        public void attack(ArrayList<Ships> s) {
+//            s.hp -= dmg;
+        }
+
+        @Override
+        public void skill() {
+
         }
     }
-    public static class BossCruiser extends EnemyShip implements Cruiser{
-        double loc = 10+ random.nextDouble();
+    public static class BossCruiser extends EnemyShip implements Cruiser,Boss{
 
         public BossCruiser() {
             super("BossCruiser",100,2,2,10);
@@ -38,8 +43,13 @@ public abstract class EnemyShip extends Ships{
         }
 
         @Override
-        public void attack(Ships s) {
-            s.hp -= dmg;
+        public void attack(ArrayList<Ships> s) {
+//            s.hp -= dmg;
+        }
+
+        @Override
+        public void skill() {
+
         }
     }
     public static class BossBattleship extends EnemyShip implements Battleship{
@@ -54,12 +64,12 @@ public abstract class EnemyShip extends Ships{
         }
 
         @Override
-        public void attack(Ships s) {
-            s.hp -= this.dmg;
+        public void attack(ArrayList<Ships> s) {
+//            s.hp -= this.dmg;
 
         }
     }
-    public static class BossCarrier extends EnemyShip implements Carrier{
+    public static class BossCarrier extends EnemyShip implements Carrier,Boss{
 
         public BossCarrier() {
             super("BossCarrier",50,5,4,10);
@@ -71,8 +81,13 @@ public abstract class EnemyShip extends Ships{
         }
 
         @Override
-        public void attack(Ships s) {
-            s.hp -= this.dmg;
+        public void attack(ArrayList<Ships> s) {
+//            s.hp -= this.dmg;
+
+        }
+
+        @Override
+        public void skill() {
 
         }
     }
@@ -80,7 +95,7 @@ public abstract class EnemyShip extends Ships{
 
         public EnemyDes() {
             super("EnemyDes",25,1,1,1);
-            location = 10 + random.nextDouble();
+            this.location = 10 + random.nextDouble();
         }
 
         @Override
@@ -89,8 +104,8 @@ public abstract class EnemyShip extends Ships{
         }
 
         @Override
-        public void attack(Ships s) {
-            s.hp -= this.dmg;
+        public void attack(ArrayList<Ships> s) {
+//            s.hp -= this.dmg;
 
         }
     }
@@ -98,7 +113,7 @@ public abstract class EnemyShip extends Ships{
 
         public EnemyCruiser() {
             super("EnemyCruiser",15,2,2,1);
-            location = 10 + random.nextDouble();
+            this.location = 10 + random.nextDouble();
 
         }
 
@@ -108,8 +123,8 @@ public abstract class EnemyShip extends Ships{
         }
 
         @Override
-        public void attack(Ships s) {
-            s.hp -= this.dmg;
+        public void attack(ArrayList<Ships> s) {
+//            s.hp -= this.dmg;
 
         }
     }
@@ -117,7 +132,7 @@ public abstract class EnemyShip extends Ships{
 
         public EnemyBattleship() {
             super("EnemyBattleship",30,4,5,1);
-            location = 10 + random.nextDouble();
+            this.location = 10 + random.nextDouble();
 
         }
 
@@ -127,8 +142,8 @@ public abstract class EnemyShip extends Ships{
         }
 
         @Override
-        public void attack(Ships s) {
-            s.hp -= this.dmg;
+        public void attack(ArrayList<Ships> s) {
+//            s.hp -= this.dmg;
 
         }
     }
@@ -136,7 +151,7 @@ public abstract class EnemyShip extends Ships{
 
         public EnemyCarrier() {
             super("EnemyAircraftCarrier",30,6,7,1);
-            location = 10 + random.nextDouble();
+            this.location = 10 + random.nextDouble();
 
         }
 
@@ -146,11 +161,11 @@ public abstract class EnemyShip extends Ships{
         }
 
         @Override
-        public void attack(Ships s) {
-            s.hp -= this.dmg;
+        public void attack(ArrayList<Ships> s) {
+//            s.hp -= this.dmg;
 
-            System.out.println(this.name+" HP: "+this.hp);
-            System.out.println(this.name +" is attacking "+ s.name+" dealing "+ this.dmg+" damage. "+s.name+" HP: "+ s.hp);
+//            System.out.println(this.name+" HP: "+this.hp);
+//            System.out.println(this.name +" is attacking "+ s.name+" dealing "+ this.dmg+" damage. "+s.name+" HP: "+ s.hp);
 
         }
     }
@@ -158,13 +173,13 @@ public abstract class EnemyShip extends Ships{
 
         public SuicideShip() {
             super("SuicideShip", 10, 4, 0, 10);
-            location = 10 + random.nextDouble();
+            this.location = 10 + random.nextDouble();
 
         }
 
         @Override
-        public void attack(Ships s) {
-            s.hp -= this.dmg;
+        public void attack(ArrayList<Ships> s) {
+//            s.hp -= this.dmg;
 
         }
     }
