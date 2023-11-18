@@ -1,25 +1,25 @@
 package AzurLane;
 
-import com.sun.tools.javac.Main;
+
 
 import javax.swing.*;
 import java.util.ArrayList;
-import java.util.Objects;
+
 
 public class FleetSetter {
     Player p;
-    JComboBox<MainShips> main1;
-    JComboBox<MainShips> main2;
-    JComboBox<MainShips> main3;
+    JComboBox<MainShip> main1;
+    JComboBox<MainShip> main2;
+    JComboBox<MainShip> main3;
 
-    JComboBox<VanguardShips> van1;
-    JComboBox<VanguardShips> van2;
-    JComboBox<VanguardShips> van3;
+    JComboBox<VanguardShip> van1;
+    JComboBox<VanguardShip> van2;
+    JComboBox<VanguardShip> van3;
 
     ArrayList<Ships> fleet;
 
 
-    public FleetSetter(Player p, JComboBox<MainShips> main1, JComboBox<MainShips> main2, JComboBox<MainShips> main3) {
+    public FleetSetter(Player p, JComboBox<MainShip> main1, JComboBox<MainShip> main2, JComboBox<MainShip> main3) {
         this.p = p;
         this.main1 = main1;
         this.main2 = main2;
@@ -27,14 +27,14 @@ public class FleetSetter {
 
     }
 
-    public FleetSetter(JComboBox<VanguardShips> van1,Player p, JComboBox<VanguardShips> van2, JComboBox<VanguardShips> van3) {
+    public FleetSetter(JComboBox<VanguardShip> van1, Player p, JComboBox<VanguardShip> van2, JComboBox<VanguardShip> van3) {
         this.p = p;
         this.van1 = van1;
         this.van2 = van2;
         this.van3 = van3;
     }
 
-    public FleetSetter(Player p, JComboBox<MainShips> main1, JComboBox<MainShips> main2, JComboBox<MainShips> main3, JComboBox<VanguardShips> van1, JComboBox<VanguardShips> van2, JComboBox<VanguardShips> van3) {
+    public FleetSetter(Player p, JComboBox<MainShip> main1, JComboBox<MainShip> main2, JComboBox<MainShip> main3, JComboBox<VanguardShip> van1, JComboBox<VanguardShip> van2, JComboBox<VanguardShip> van3) {
         this.p = p;
         this.main1 = main1;
         this.main2 = main2;

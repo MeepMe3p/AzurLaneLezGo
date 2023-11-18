@@ -8,10 +8,10 @@ public class Player {
     private int cubeCount;
     private int exp_points;
 
-    public ArrayList<MainShips> mainShips;
-    public ArrayList<VanguardShips> vanguardShips;
+    public ArrayList<MainShip> mainShips;
+    public ArrayList<VanguardShip> vanguardShips;
 
-    public Player(String name, int level, int cubeCount, ArrayList<MainShips> main, ArrayList<VanguardShips> van) {
+    public Player(String name, int level, int cubeCount, ArrayList<MainShip> main, ArrayList<VanguardShip> van) {
         this.name = name;
         this.level = level;
         this.cubeCount = cubeCount;

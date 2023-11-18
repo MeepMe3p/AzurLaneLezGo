@@ -51,8 +51,16 @@ public class AzurLaneCopy extends JFrame{
     private ArrayList<EnemyShip> normalEnemy;
     private Battle battle;
     public AzurLaneCopy(){
-        ArrayList<MainShips> mainShips = null;
-        ArrayList<VanguardShips> vangShips = null;
+
+        JFrame frame = new JFrame("Low Budget Azur Lane");
+        frame.setContentPane(this.mainPanel);
+        frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+        frame.pack();
+        frame.setSize(900,500);
+        frame.setVisible(true);
+
+        ArrayList<MainShip> mainShips = null;
+        ArrayList<VanguardShip> vangShips = null;
 
         Player el = new Player("Elijah",1,30, mainShips,vangShips);
         homeButton.addActionListener(new ActionListener() {
@@ -110,7 +118,7 @@ public class AzurLaneCopy extends JFrame{
                     System.out.println("eep");
 //                    throw new IllegalArgumentException("You have no main ships");
                 }else {
-                    for (MainShips m : el.mainShips) {
+                    for (MainShip m : el.mainShips) {
                         cbFleetMain1.addItem(m);
                         cbFleetMain2.addItem(m);
                         cbFleetMain3.addItem(m);
@@ -120,7 +128,7 @@ public class AzurLaneCopy extends JFrame{
                     System.out.println("eepsquared");
 //                    throw new IllegalArgumentException("No Vanguard");
                 }else {
-                    for (VanguardShips v : el.vanguardShips) {
+                    for (VanguardShip v : el.vanguardShips) {
                         cbFleetVan1.addItem(v);
                         cbFleetVan2.addItem(v);
                         cbFleetVan3.addItem(v);
@@ -144,11 +152,11 @@ public class AzurLaneCopy extends JFrame{
                 parentPanel.repaint();
                 parentPanel.revalidate();
 
-                try{
-
-                }catch (IllegalArgumentException a){
-                    JOptionPane.showMessageDialog(null,a.getMessage());
-                }
+//                try{
+//
+//                }catch (IllegalArgumentException a){
+//                    JOptionPane.showMessageDialog(null,a.getMessage());
+//                }
             }
         });
 
@@ -158,7 +166,7 @@ public class AzurLaneCopy extends JFrame{
             public void actionPerformed(ActionEvent e) {
                 try{
                     Gacha g = new Gacha();
-                    MainShips m = g.buildMainShip(el);
+                    MainShip m = g.buildMainShip(el);
                     tfShipsPulled.append("You have pulled "+ m.name+"\n");
                     tfGachaCubes.setText("Cubes: "+ el.getCubeCount());
                 }catch(IllegalArgumentException a){
@@ -171,7 +179,7 @@ public class AzurLaneCopy extends JFrame{
             public void actionPerformed(ActionEvent e) {
                 try{
                     Gacha g = new Gacha();
-                    VanguardShips v = g.buildVanguardShip(el);
+                    VanguardShip v = g.buildVanguardShip(el);
                     tfShipsPulled.append("You have pulled "+ v.name+"\n");
                     tfGachaCubes.setText("Cubes: "+ el.getCubeCount());
                 }catch(IllegalArgumentException a){
@@ -189,7 +197,7 @@ public class AzurLaneCopy extends JFrame{
                     shipTAmain.setText("You have no main ships pien go get a life");
                 }else{
                     shipTAmain.setText("These are your main ships \n");
-                    for(MainShips m: el.mainShips){
+                    for(MainShip m: el.mainShips){
                         shipTAmain.append(m.name+"\n");
                     }
                 }
@@ -198,7 +206,7 @@ public class AzurLaneCopy extends JFrame{
                     shipTAvang.setText("You have no vanguard ships pien go get a life");
                 }else{
                     shipTAvang.setText("These are your main ships \n");
-                    for(VanguardShips vg: el.vanguardShips){
+                    for(VanguardShip vg: el.vanguardShips){
                         shipTAvang.append(vg.name+"\n");
                     }
                 }
@@ -323,7 +331,7 @@ public class AzurLaneCopy extends JFrame{
                     RealBattle rb = new RealBattle(bossEnemy,attackFleet,normalEnemy,taBattleSimulation);
                     rb.startBattle();
                 }catch(NullPointerException a){
-                    JOptionPane.showMessageDialog(AzurLaneCopy.this,a.getMessage());
+                    JOptionPane.showMessageDialog(AzurLaneCopy.this,"Please choose a map");
                 }catch(IllegalArgumentException b){
                     int i = JOptionPane.showConfirmDialog(null,b.getMessage()+" would you like to go to set your attack fleet?");
                     if(i == JOptionPane.YES_OPTION){
@@ -387,14 +395,5 @@ public class AzurLaneCopy extends JFrame{
         });
     }
 
-    public static void main(String[] args) {
-        JFrame frame = new JFrame("Low Budget Azur Lane");
-        frame.setContentPane(new AzurLaneCopy().mainPanel);
-        frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-        frame.pack();
-        frame.setSize(900,500);
-        frame.setVisible(true);
 
-
-    }
 }

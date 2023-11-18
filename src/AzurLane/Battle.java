@@ -5,7 +5,7 @@ import java.util.Random;
 
 public class Battle {
 
-    private ArrayList<EnemyShip> boss;
+    private  ArrayList<EnemyShip> boss;
     private ArrayList<EnemyShip> normal;
 
     public Battle() {

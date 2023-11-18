@@ -5,6 +5,7 @@ import java.util.Random;
 public abstract class EnemyShip extends Ships{
 
     double speed;
+    Ships nearest;
     Random random = new Random();
     public EnemyShip(String name, int hp, int dmg, int atk_spd,double location) {
         super(name, hp, dmg, atk_spd,location);
@@ -23,7 +24,16 @@ public abstract class EnemyShip extends Ships{
 
         @Override
         public void attack(ArrayList<Ships> s) {
-//            s.hp -= dmg;
+            if(s.isEmpty()){
+                return;
+            }
+            nearest = s.get(0);
+            System.out.println(nearest.name+" "+nearest.hp+" "+nearest.location);
+            s.get(0).hp -= dmg;
+            if(s.get(0).hp <0){
+                s.get(0).hp = 0;
+            }
+            System.out.println(nearest.name+" "+nearest.hp+" "+nearest.location);
         }
 
         @Override
@@ -44,7 +54,16 @@ public abstract class EnemyShip extends Ships{
 
         @Override
         public void attack(ArrayList<Ships> s) {
-//            s.hp -= dmg;
+            if(s.isEmpty()){
+                return;
+            }
+            nearest = s.get(0);
+            System.out.println(nearest.name+" "+nearest.hp+" "+nearest.location);
+            s.get(0).hp -= dmg;
+            if(s.get(0).hp <0){
+                s.get(0).hp = 0;
+            }
+            System.out.println(nearest.name+" "+nearest.hp+" "+nearest.location);
         }
 
         @Override
@@ -65,8 +84,16 @@ public abstract class EnemyShip extends Ships{
 
         @Override
         public void attack(ArrayList<Ships> s) {
-//            s.hp -= this.dmg;
-
+            if(s.isEmpty()){
+                return;
+            }
+            nearest = s.get(0);
+            System.out.println(nearest.name+" "+nearest.hp+" "+nearest.location);
+            s.get(0).hp -= dmg;
+            if(s.get(0).hp <0){
+                s.get(0).hp = 0;
+            }
+            System.out.println(nearest.name+" "+nearest.hp+" "+nearest.location);
         }
     }
     public static class BossCarrier extends EnemyShip implements Carrier,Boss{
@@ -82,8 +109,16 @@ public abstract class EnemyShip extends Ships{
 
         @Override
         public void attack(ArrayList<Ships> s) {
-//            s.hp -= this.dmg;
-
+            if(s.isEmpty()){
+                return;
+            }
+            nearest = s.get(0);
+            System.out.println(nearest.name+" "+nearest.hp+" "+nearest.location);
+            s.get(0).hp -= dmg;
+            if(s.get(0).hp <0){
+                s.get(0).hp = 0;
+            }
+            System.out.println(nearest.name+" "+nearest.hp+" "+nearest.location);
         }
 
         @Override
@@ -105,8 +140,16 @@ public abstract class EnemyShip extends Ships{
 
         @Override
         public void attack(ArrayList<Ships> s) {
-//            s.hp -= this.dmg;
-
+            if(s.isEmpty()){
+                return;
+            }
+            nearest = s.get(0);
+            System.out.println(nearest.name+" "+nearest.hp+" "+nearest.location);
+            s.get(0).hp -= dmg;
+            if(s.get(0).hp <0){
+                s.get(0).hp = 0;
+            }
+            System.out.println(nearest.name+" "+nearest.hp+" "+nearest.location);
         }
     }
     public static class EnemyCruiser extends EnemyShip implements Cruiser{
@@ -124,8 +167,16 @@ public abstract class EnemyShip extends Ships{
 
         @Override
         public void attack(ArrayList<Ships> s) {
-//            s.hp -= this.dmg;
-
+            if(s.isEmpty()){
+                return;
+            }
+            nearest = s.get(0);
+            System.out.println(nearest.name+" "+nearest.hp+" "+nearest.location);
+            s.get(0).hp -= dmg;
+            if(s.get(0).hp <0){
+                s.get(0).hp = 0;
+            }
+            System.out.println(nearest.name+" "+nearest.hp+" "+nearest.location);
         }
     }
     public static class EnemyBattleship extends EnemyShip implements Battleship{
@@ -143,8 +194,16 @@ public abstract class EnemyShip extends Ships{
 
         @Override
         public void attack(ArrayList<Ships> s) {
-//            s.hp -= this.dmg;
-
+            if(s.isEmpty()){
+                return;
+            }
+            nearest = s.get(0);
+            System.out.println(nearest.name+" "+nearest.hp+" "+nearest.location);
+            s.get(0).hp -= dmg;
+            if(s.get(0).hp <0){
+                s.get(0).hp = 0;
+            }
+            System.out.println(nearest.name+" "+nearest.hp+" "+nearest.location);
         }
     }
     public static class EnemyCarrier extends EnemyShip  implements Carrier{
@@ -162,11 +221,16 @@ public abstract class EnemyShip extends Ships{
 
         @Override
         public void attack(ArrayList<Ships> s) {
-//            s.hp -= this.dmg;
-
-//            System.out.println(this.name+" HP: "+this.hp);
-//            System.out.println(this.name +" is attacking "+ s.name+" dealing "+ this.dmg+" damage. "+s.name+" HP: "+ s.hp);
-
+            if(s.isEmpty()){
+                return;
+            }
+            nearest = s.get(0);
+            System.out.println(nearest.name+" "+nearest.hp+" "+nearest.location);
+            s.get(0).hp -= dmg;
+            if(s.get(0).hp <0){
+                s.get(0).hp = 0;
+            }
+            System.out.println(nearest.name+" "+nearest.hp+" "+nearest.location);
         }
     }
     public static class SuicideShip extends EnemyShip{
@@ -179,8 +243,16 @@ public abstract class EnemyShip extends Ships{
 
         @Override
         public void attack(ArrayList<Ships> s) {
-//            s.hp -= this.dmg;
-
+            if(s.isEmpty()){
+                return;
+            }
+            nearest = s.get(0);
+            System.out.println(nearest.name+" "+nearest.hp+" "+nearest.location);
+            s.get(0).hp -= dmg;
+            if(s.get(0).hp <0){
+                s.get(0).hp = 0;
+            }
+            System.out.println(nearest.name+" "+nearest.hp+" "+nearest.location);
         }
     }
 }

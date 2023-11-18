@@ -36,9 +36,10 @@ public abstract class Ships {
         this.location = location;
     }
     public static class CompareDistance implements Comparator<Ships>{
+
         @Override
         public int compare(Ships o1, Ships o2) {
-            return Double.compare(o1.location,o2.location);
+            return Double.compare(o1.location, o2.location);
         }
     }
 }
