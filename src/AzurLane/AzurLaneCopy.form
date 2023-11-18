@@ -178,7 +178,7 @@
               </component>
               <vspacer id="58ae2">
                 <constraints>
-                  <grid row="0" column="0" row-span="1" col-span="7" vsize-policy="6" hsize-policy="1" anchor="0" fill="2" indent="0" use-parent-layout="false"/>
+                  <grid row="0" column="0" row-span="1" col-span="1" vsize-policy="6" hsize-policy="1" anchor="0" fill="2" indent="0" use-parent-layout="false"/>
                 </constraints>
               </vspacer>
               <vspacer id="e24dd">
@@ -202,19 +202,14 @@
                 <constraints>
                   <grid row="2" column="2" row-span="1" col-span="1" vsize-policy="0" hsize-policy="2" anchor="8" fill="1" indent="0" use-parent-layout="false"/>
                 </constraints>
-                <properties/>
+                <properties>
+                  <background color="-13947600"/>
+                  <editable value="true"/>
+                </properties>
               </component>
               <component id="bbd7" class="javax.swing.JComboBox" binding="cbFleetMain3">
                 <constraints>
                   <grid row="2" column="3" row-span="1" col-span="1" vsize-policy="0" hsize-policy="2" anchor="8" fill="1" indent="0" use-parent-layout="false"/>
-                </constraints>
-                <properties>
-                  <model/>
-                </properties>
-              </component>
-              <component id="dc73c" class="javax.swing.JComboBox" binding="cbFleetMain1">
-                <constraints>
-                  <grid row="2" column="0" row-span="1" col-span="2" vsize-policy="0" hsize-policy="2" anchor="8" fill="1" indent="0" use-parent-layout="false"/>
                 </constraints>
                 <properties>
                   <model/>
@@ -242,6 +237,14 @@
                 </constraints>
                 <properties>
                   <text value="SAVE FLEET"/>
+                </properties>
+              </component>
+              <component id="dc73c" class="javax.swing.JComboBox" binding="cbFleetMain1">
+                <constraints>
+                  <grid row="2" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="2" anchor="8" fill="1" indent="0" use-parent-layout="false"/>
+                </constraints>
+                <properties>
+                  <model/>
                 </properties>
               </component>
             </children>

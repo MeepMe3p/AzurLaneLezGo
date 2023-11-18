@@ -25,16 +25,13 @@ public static class Laffey extends VanguardShip implements Destroyer{
         }
             s.sort(new CompareDistance());
             nearest = s.get(0);
-            System.out.println(nearest.name+" "+nearest.hp+" "+nearest.location);
+//            System.out.println(nearest.name+" "+nearest.hp+" "+nearest.location);
             s.get(0).hp -= dmg;
         if(s.get(0).hp <0){
             s.get(0).hp = 0;
+            System.out.println(nearest.name + " is now dedz yay congo rats!\n");
         }
-            System.out.println(nearest.name+" "+nearest.hp+" "+nearest.location);
-//            System.out.println("qqqq");
-
-
-
+        System.out.println(this.name+" attacked "+ nearest.name+" dealing "+ this.dmg+ " Enemy HP: "+nearest.hp);
     }
 
     @Override
@@ -62,12 +59,13 @@ public static class Javelin extends VanguardShip implements Destroyer{
         }
         s.sort(new CompareDistance());
         nearest = s.get(0);
-        System.out.println(nearest.name+" "+nearest.hp+" "+nearest.location);
+//        System.out.println(nearest.name+" "+nearest.hp+" "+nearest.location);
         s.get(0).hp -= dmg;
         if(s.get(0).hp <0){
             s.get(0).hp = 0;
+            System.out.println(nearest.name + " is now dedz yay congo rats!\n");
         }
-        System.out.println(nearest.name+" "+nearest.hp+" "+nearest.location);
+        System.out.println(this.name+" attacked "+ nearest.name+" dealing "+ this.dmg+ " Enemy HP: "+nearest.hp);
     }
 }
 public static class Noshiro extends VanguardShip implements Cruiser{
@@ -90,12 +88,13 @@ public static class Noshiro extends VanguardShip implements Cruiser{
         }
         s.sort(new CompareDistance());
         nearest = s.get(0);
-        System.out.println(nearest.name+" "+nearest.hp+" "+nearest.location);
+//        System.out.println(nearest.name+" "+nearest.hp+" "+nearest.location);
         s.get(0).hp -= dmg;
         if(s.get(0).hp <0){
             s.get(0).hp = 0;
+            System.out.println(nearest.name + " is now dedz yay congo rats!\n");
         }
-        System.out.println(nearest.name+" "+nearest.hp+" "+nearest.location);
+        System.out.println(this.name+" attacked "+ nearest.name+" dealing "+ this.dmg+ " Enemy HP: "+nearest.hp);
     }
 }
 public static class Agir extends VanguardShip implements Cruiser{
@@ -117,12 +116,16 @@ public static class Agir extends VanguardShip implements Cruiser{
         }
         s.sort(new CompareDistance());
         nearest = s.get(0);
-        System.out.println(nearest.name+" "+nearest.hp+" "+nearest.location);
+//        System.out.println(nearest.name+" "+nearest.hp+" "+nearest.location);
         s.get(0).hp -= dmg;
         if(s.get(0).hp <0){
             s.get(0).hp = 0;
+            System.out.println(nearest.name + " is now dedz yay congo rats!\n");
+
         }
-        System.out.println(nearest.name+" "+nearest.hp+" "+nearest.location);
+        System.out.println(this.name+" attacked "+ nearest.name+" dealing "+ this.dmg+ " Enemy HP: "+nearest.hp);
+
+
     }
 }
 

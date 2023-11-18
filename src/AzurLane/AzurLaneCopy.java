@@ -4,6 +4,10 @@ package AzurLane;
 import javax.swing.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+import java.io.BufferedReader;
+import java.io.FileNotFoundException;
+import java.io.FileReader;
+import java.io.IOException;
 import java.util.ArrayList;
 
 public class AzurLaneCopy extends JFrame{
@@ -59,10 +63,26 @@ public class AzurLaneCopy extends JFrame{
         frame.setSize(900,500);
         frame.setVisible(true);
 
+        try {
+            StringBuilder sb = new StringBuilder();
+            String line;
+            BufferedReader br = new BufferedReader(new FileReader("src\\AzurLane\\Home.txt"));
+            while ((line = br.readLine()) != null){
+                sb.append(line);
+                sb.append("\n");
+            }
+            JOptionPane.showMessageDialog(null,sb);
+        } catch (IOException e) {
+            throw new RuntimeException(e);
+        }
+
+        String name = JOptionPane.showInputDialog(null,"Enter your name: ");
+
+
         ArrayList<MainShip> mainShips = null;
         ArrayList<VanguardShip> vangShips = null;
 
-        Player el = new Player("Elijah",1,30, mainShips,vangShips);
+        Player el = new Player(name,1,30, mainShips,vangShips);
         homeButton.addActionListener(new ActionListener() {
 
             @Override

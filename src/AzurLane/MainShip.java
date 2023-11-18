@@ -17,15 +17,13 @@ public abstract class MainShip extends Ships{
                 return;
             }
             nearest = s.get(0);
-            System.out.println(nearest.name+" "+nearest.hp+" "+nearest.location);
+//            System.out.println(nearest.name+" "+nearest.hp+" "+nearest.location);
             s.get(0).hp -= dmg;
             if(s.get(0).hp <0){
                 s.get(0).hp = 0;
+                System.out.println(nearest.name + " is now dedz yay congo rats!\n");
             }
-            System.out.println(nearest.name+" "+nearest.hp+" "+nearest.location);
-
-
-
+            System.out.println(this.name+" attacked "+ nearest.name+" dealing "+ this.dmg+ " Enemy HP: "+nearest.hp);
         }
 
         public Nagato(){
@@ -55,12 +53,14 @@ public abstract class MainShip extends Ships{
                 return;
             }
             nearest = s.get(0);
-            System.out.println(nearest.name+" "+nearest.hp+" "+nearest.location);
+//            System.out.println(nearest.name+" "+nearest.hp+" "+nearest.location);
+
             s.get(0).hp -= dmg;
             if(s.get(0).hp <0){
                 s.get(0).hp = 0;
+                System.out.println(nearest.name + " is now dedz yay congo rats!\n");
             }
-            System.out.println(nearest.name+" "+nearest.hp+" "+nearest.location);
+            System.out.println(this.name+" attacked "+ nearest.name+" dealing "+ this.dmg+ " Enemy HP: "+nearest.hp);
 
         }
     }
@@ -81,12 +81,14 @@ public abstract class MainShip extends Ships{
                 return;
             }
             nearest = s.get(0);
-            System.out.println(nearest.name+" "+nearest.hp+" "+nearest.location);
+//            System.out.println(nearest.name+" "+nearest.hp+" "+nearest.location);
             s.get(0).hp -= dmg;
             if(s.get(0).hp <0){
                 s.get(0).hp = 0;
+                System.out.println(nearest.name + " is now dedz yay congo rats!\n");
             }
-            System.out.println(nearest.name+" "+nearest.hp+" "+nearest.location);
+            System.out.println(this.name+" attacked "+nearest.name+" dealing "+ this.dmg+ " Enemy HP: "+nearest.hp);
+
 
         }
     }
@@ -107,12 +109,14 @@ public abstract class MainShip extends Ships{
                 return;
             }
             nearest = s.get(0);
-            System.out.println(nearest.name+" "+nearest.hp+" "+nearest.location);
+//            System.out.println(nearest.name+" "+nearest.hp+" "+nearest.location);
             s.get(0).hp -= dmg;
             if(s.get(0).hp <0){
                 s.get(0).hp = 0;
+                System.out.println(nearest.name + " is now dedz yay congo rats!\n");
             }
-            System.out.println(nearest.name+" "+nearest.hp+" "+nearest.location);
+            System.out.println(this.name+" attacked "+ nearest.name+" dealing "+ this.dmg+ " Enemy HP: "+nearest.hp);
+
 
         }
     }

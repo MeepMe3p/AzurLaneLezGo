@@ -28,12 +28,13 @@ public abstract class EnemyShip extends Ships{
                 return;
             }
             nearest = s.get(0);
-            System.out.println(nearest.name+" "+nearest.hp+" "+nearest.location);
+//            System.out.println(nearest.name+" "+nearest.hp+" "+nearest.location);
             s.get(0).hp -= dmg;
             if(s.get(0).hp <0){
                 s.get(0).hp = 0;
+                System.out.println(nearest.name + " is now dedz there there!");
             }
-            System.out.println(nearest.name+" "+nearest.hp+" "+nearest.location);
+            System.out.println(this.name+" attacked "+ nearest.name+" dealing "+ this.dmg+ " Enemy HP: "+nearest.hp);
         }
 
         @Override
@@ -58,12 +59,14 @@ public abstract class EnemyShip extends Ships{
                 return;
             }
             nearest = s.get(0);
-            System.out.println(nearest.name+" "+nearest.hp+" "+nearest.location);
+//            System.out.println(nearest.name+" "+nearest.hp+" "+nearest.location);
             s.get(0).hp -= dmg;
             if(s.get(0).hp <0){
                 s.get(0).hp = 0;
+                System.out.println(nearest.name + " is now dedz there there!");
+
             }
-            System.out.println(nearest.name+" "+nearest.hp+" "+nearest.location);
+            System.out.println(this.name+" attacked "+ nearest.name+" dealing "+ this.dmg+ " Enemy HP: "+nearest.hp);
         }
 
         @Override
@@ -88,12 +91,14 @@ public abstract class EnemyShip extends Ships{
                 return;
             }
             nearest = s.get(0);
-            System.out.println(nearest.name+" "+nearest.hp+" "+nearest.location);
+//            System.out.println(nearest.name+" "+nearest.hp+" "+nearest.location);
             s.get(0).hp -= dmg;
             if(s.get(0).hp <0){
                 s.get(0).hp = 0;
+                System.out.println(nearest.name + " is now dedz there there!");
+
             }
-            System.out.println(nearest.name+" "+nearest.hp+" "+nearest.location);
+            System.out.println(this.name+" attacked "+ nearest.name+" dealing "+ this.dmg+ " Enemy HP: "+nearest.hp);
         }
     }
     public static class BossCarrier extends EnemyShip implements Carrier,Boss{
@@ -113,12 +118,14 @@ public abstract class EnemyShip extends Ships{
                 return;
             }
             nearest = s.get(0);
-            System.out.println(nearest.name+" "+nearest.hp+" "+nearest.location);
+//            System.out.println(nearest.name+" "+nearest.hp+" "+nearest.location);
             s.get(0).hp -= dmg;
             if(s.get(0).hp <0){
                 s.get(0).hp = 0;
+                System.out.println(nearest.name + " is now dedz there there!");
+
             }
-            System.out.println(nearest.name+" "+nearest.hp+" "+nearest.location);
+            System.out.println(this.name+" attacked "+ nearest.name+" dealing "+ this.dmg+ " Enemy HP: "+nearest.hp);
         }
 
         @Override
@@ -144,12 +151,14 @@ public abstract class EnemyShip extends Ships{
                 return;
             }
             nearest = s.get(0);
-            System.out.println(nearest.name+" "+nearest.hp+" "+nearest.location);
+//            System.out.println(nearest.name+" "+nearest.hp+" "+nearest.location);
             s.get(0).hp -= dmg;
             if(s.get(0).hp <0){
                 s.get(0).hp = 0;
+                System.out.println(nearest.name + " is now dedz there there!");
+
             }
-            System.out.println(nearest.name+" "+nearest.hp+" "+nearest.location);
+            System.out.println(this.name+" attacked "+ nearest.name+" dealing "+ this.dmg+ " Enemy HP: "+nearest.hp);
         }
     }
     public static class EnemyCruiser extends EnemyShip implements Cruiser{
@@ -171,12 +180,14 @@ public abstract class EnemyShip extends Ships{
                 return;
             }
             nearest = s.get(0);
-            System.out.println(nearest.name+" "+nearest.hp+" "+nearest.location);
+//            System.out.println(nearest.name+" "+nearest.hp+" "+nearest.location);
             s.get(0).hp -= dmg;
             if(s.get(0).hp <0){
                 s.get(0).hp = 0;
+                System.out.println(nearest.name + " is now dedz there there!");
+
             }
-            System.out.println(nearest.name+" "+nearest.hp+" "+nearest.location);
+            System.out.println(this.name+" attacked "+ nearest.name+" dealing "+ this.dmg+ " Enemy HP: "+nearest.hp);
         }
     }
     public static class EnemyBattleship extends EnemyShip implements Battleship{
@@ -198,12 +209,14 @@ public abstract class EnemyShip extends Ships{
                 return;
             }
             nearest = s.get(0);
-            System.out.println(nearest.name+" "+nearest.hp+" "+nearest.location);
+//            System.out.println(nearest.name+" "+nearest.hp+" "+nearest.location);
             s.get(0).hp -= dmg;
             if(s.get(0).hp <0){
                 s.get(0).hp = 0;
+                System.out.println(nearest.name + " is now dedz there there");
+
             }
-            System.out.println(nearest.name+" "+nearest.hp+" "+nearest.location);
+            System.out.println(this.name+" attacked "+ nearest.name+" dealing "+ this.dmg+ " Enemy HP: "+nearest.hp);
         }
     }
     public static class EnemyCarrier extends EnemyShip  implements Carrier{
@@ -225,12 +238,15 @@ public abstract class EnemyShip extends Ships{
                 return;
             }
             nearest = s.get(0);
-            System.out.println(nearest.name+" "+nearest.hp+" "+nearest.location);
+//            System.out.println(nearest.name+" "+nearest.hp+" "+nearest.location);
             s.get(0).hp -= dmg;
             if(s.get(0).hp <0){
                 s.get(0).hp = 0;
+                System.out.println(nearest.name + " is now dedz there there");
+
             }
-            System.out.println(nearest.name+" "+nearest.hp+" "+nearest.location);
+            System.out.println(this.name+" attacked "+ nearest.name+" dealing "+ this.dmg+ " Enemy HP: "+nearest.hp);
+
         }
     }
     public static class SuicideShip extends EnemyShip{
@@ -247,12 +263,14 @@ public abstract class EnemyShip extends Ships{
                 return;
             }
             nearest = s.get(0);
-            System.out.println(nearest.name+" "+nearest.hp+" "+nearest.location);
+//            System.out.println(nearest.name+" "+nearest.hp+" "+nearest.location);
             s.get(0).hp -= dmg;
             if(s.get(0).hp <0){
                 s.get(0).hp = 0;
+                System.out.println(nearest.name + " is now dedz there there");
+
             }
-            System.out.println(nearest.name+" "+nearest.hp+" "+nearest.location);
+            System.out.println(this.name+" attacked "+ nearest.name+" dealing "+ this.dmg+ " Enemy HP: "+nearest.hp);
         }
     }
 }
